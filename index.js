@@ -12,4 +12,4 @@ import Settings from "./settings";
 // Unobfuscated fields: https://github.com/KevyPorter/Minecraft-Forge-Utils/blob/master/fields.csv
 
 
-register("command", () => Settings.openGUI()).setName("opengui");
+register("command", () => Settings.openGUI()).setName("sharky");
