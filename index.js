@@ -6,6 +6,7 @@ var tag = "&3[&bSharkie&3] &r"
 
 // Modules State
 var toggleSprintOn = false;
+var facingOn = true;
 
 // Client Functions
 
@@ -58,3 +59,32 @@ register('command', function() { // Toggle Sprint Module Command
     }
 }).setCommandName('togglesprint');
 
+register("command", () => { //Party tako the cutie pie
+    ChatLib.command("p grazzz");
+}).setName("tac");
+
+register("command", () => { //Party nic
+    ChatLib.command("p NicFr");
+}).setName("nic");
+
+register("command", () => { //resets party inv
+    ChatLib.command("p leave");
+}).setName("res");
+
+register("renderOverlay", () => { // Compass
+    if(!facingOn) return;
+	
+	var width = Renderer.screen.getWidth();
+	var height = Renderer.screen.getHeight();
+	
+	Renderer.drawString(Player.facing(), 5, height - Client.getMinecraft().field_71466_p.field_78288_b - 5); // fontRenderer.FONT_HEIGHT    
+});
+
+register("renderOverlay", () => { // Compass
+    if(!facingOn) return;
+	
+	var width = Renderer.screen.getWidth();
+	var height = Renderer.screen.getHeight();
+	
+	Renderer.drawString(Player.getYaw(), 5, height - Client.getMinecraft().field_71466_p.field_78288_b * 2 - 7); // fontRenderer.FONT_HEIGHT    
+});
