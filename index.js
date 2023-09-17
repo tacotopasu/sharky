@@ -1,90 +1,15 @@
-// Variables
-var tag = "&3[&bSharkie&3] &r"
+import "./modules/calc";
+import "./modules/clock";
+import "./modules/compass";
+import "./modules/coords";
+import "./modules/helloNiko";
+import "./modules/toggleSprint";
+import "./modules/extras";
+import "./modules/cropCounter";
+import Settings from "./settings";
 
 // Unobfuscated functions: https://github.com/Deadrik/TFC2/blob/master/custommappings/methods.csv
 // Unobfuscated fields: https://github.com/KevyPorter/Minecraft-Forge-Utils/blob/master/fields.csv
 
-// Modules State
-var toggleSprintOn = false;
-var facingOn = true;
 
-// Client Functions
-
-function Echo(text){
-    ChatLib.chat(`${tag}${text}`);
-}
-
-function ToggleModule(){
-
-} // TODO
-
-
-register("command", () => { // Hello World
-    Echo("Hello World!");
-}).setName("hello");
-
-register("command", () => { // Niko ❤
-    ChatLib.chat(ChatLib.getCenteredText("&d❤&r I &dlove &ryou niko! &d❤"));
-}).setName("niko");
-
-
-register('step', toggleSprintStep); // Toggle Sprint Step Function
-var sprintOn = false;
-function toggleSprintStep() {
-    if (!toggleSprintOn) return;
-    if (Player.getMotionX() == 0 && Player.getMotionZ() == 0) return;
-    var keyBind = new KeyBind(Client.getMinecraft().field_71474_y.field_151444_V); // gameSettings.keyBindSprint
-    // if (keyBind.isPressed() && !sprintOn) sprintOn = true;
-    // if (keyBind.isPressed() && sprintOn) sprintOn = false;
-    if (keyBind.isPressed()) sprintOn = !sprintOn;
-    keyBind.setState(sprintOn);
-}
-
-register("renderOverlay", () => { // Toggle Sprint Indicator (HUD)
-    if(!sprintOn || !toggleSprintOn) return;
-	
-	var width = Renderer.screen.getWidth();
-	var height = Renderer.screen.getHeight();
-	
-	Renderer.drawString("&3[&bSprinting Toggled&3]", 5, height - Client.getMinecraft().field_71466_p.field_78288_b - 5); // fontRenderer.FONT_HEIGHT    
-});
-
-register('command', function() { // Toggle Sprint Module Command
-    if (toggleSprintOn) {
-        toggleSprintOn = false;
-        Echo("&lToggle Sprint&r Disabled.");
-    } else {
-        toggleSprintOn = true;
-        Echo("&lToggle Sprint&r Enabled.");
-    }
-}).setCommandName('togglesprint');
-
-register("command", () => { //Party tako the cutie pie
-    ChatLib.command("p grazzz");
-}).setName("tac");
-
-register("command", () => { //Party nic
-    ChatLib.command("p NicFr");
-}).setName("nic");
-
-register("command", () => { //resets party inv
-    ChatLib.command("p leave");
-}).setName("res");
-
-register("renderOverlay", () => { // Compass
-    if(!facingOn) return;
-	
-	var width = Renderer.screen.getWidth();
-	var height = Renderer.screen.getHeight();
-	
-	Renderer.drawString(Player.facing(), 5, height - Client.getMinecraft().field_71466_p.field_78288_b - 5); // fontRenderer.FONT_HEIGHT    
-});
-
-register("renderOverlay", () => { // Compass
-    if(!facingOn) return;
-	
-	var width = Renderer.screen.getWidth();
-	var height = Renderer.screen.getHeight();
-	
-	Renderer.drawString(Player.getYaw(), 5, height - Client.getMinecraft().field_71466_p.field_78288_b * 2 - 7); // fontRenderer.FONT_HEIGHT    
-});
+register("command", () => Settings.openGUI()).setName("opengui");
