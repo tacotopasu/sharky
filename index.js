@@ -6,6 +6,8 @@ import "./modules/helloNiko";
 import "./modules/toggleSprint";
 import "./modules/extras";
 import "./modules/cropCounter";
+import "./modules/rodCounter";
+import "./modules/armor";
 import Settings from "./settings";
 
 // Unobfuscated functions: https://github.com/Deadrik/TFC2/blob/master/custommappings/methods.csv
