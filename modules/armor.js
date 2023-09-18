@@ -41,3 +41,4 @@ register("renderOverlay", () => {
 
     Renderer.drawString("you gotta do /ct load eevry time u change armor but idfk how to fix that shit i alr tried puttting this code in a loop  but it dont work cuz nah chat triggers is a niga for that ", 10, Client.getMinecraft().field_71466_p.field_78288_b + 281); // fontRenderer.FONT_HEIGHT
 });
+
