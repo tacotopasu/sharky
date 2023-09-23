@@ -5,6 +5,23 @@ const prefix_text = "&3[&bSharky&3] &r";
 
 @Vigilant("Sharky")
 class Settings {
+    // Armor
+    @SwitchProperty({
+        name: "Armor",
+        description: "",
+        category: "Client",
+        subcategory: "HUD"
+    })
+    armor = false;
+
+    @SwitchProperty({
+        name: "Armor Labels",
+        description: "",
+        category: "Client",
+        subcategory: "HUD"
+    })
+    armorLabels = false;
+
     // Clock
     @SwitchProperty({
         name: "Clock",
