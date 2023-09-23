@@ -1,4 +1,4 @@
-import Settings from "../settings";
+import Settings from "../../../settings";
 
 var crops = 0
 
@@ -12,7 +12,7 @@ register("renderOverlay", () => {
     var width = Renderer.screen.getWidth();
 	var height = Renderer.screen.getHeight();
 
-    Renderer.drawString(Settings.cropCounterText + " " + crops, 10, Client.getMinecraft().field_71466_p.field_78288_b + 15); // fontRenderer.FONT_HEIGHT
+    Renderer.drawString(Settings.cropCounterText || "Crops Broken:" + " " + crops, 10, Client.getMinecraft().field_71466_p.field_78288_b + 15); // fontRenderer.FONT_HEIGHT
 });
 
 register("command", () => {

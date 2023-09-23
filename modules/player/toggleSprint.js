@@ -1,4 +1,4 @@
-import Settings from "../settings";
+import Settings from "../../settings";
 
 register('step', toggleSprintStep);
 var sprintOn = false;

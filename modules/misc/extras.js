@@ -14,3 +14,8 @@ register("command", () => { // Leaves party (resets party invites)
     ChatLib.command("p leave");
 }).setName("res");
 
+// Extras 
+
+register("command", () => { // Niko ❤
+    ChatLib.chat(ChatLib.getCenteredText("&d❤&r I &dlove &ryou niko! &d❤"));
+}).setName("niko");

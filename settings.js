@@ -5,60 +5,83 @@ const prefix_text = "&3[&bSharky&3] &r";
 
 @Vigilant("Sharky")
 class Settings {
+    // Clock
     @SwitchProperty({
         name: "Clock",
         description: "",
-        category: "HUD",
-        subcategory: "Miscellaneous"
+        category: "Client",
+        subcategory: "HUD"
     })
     clock = false;
 
     @SwitchProperty({
         name: "Clock 12h System",
         description: "",
-        category: "HUD",
-        subcategory: "Miscellaneous"
+        category: "Client",
+        subcategory: "HUD"
     })
     clock12h = true;
 
+    // Crop Counter
     @SwitchProperty({
         name: "Crop Counter",
         description: "",
-        category: "HUD",
-        subcategory: "Farming"
+        category: "Client",
+        subcategory: "HUD"
     })
     cropCounter = false;
 
     @TextProperty({
         name: "Crop Counter Label",
         description: "",
-        category: "HUD",
-        subcategory: "Farming",
-        placeholder: "Crops Broken:"
+        category: "Client",
+        subcategory: "HUD",
+        placeholder: ""
     })
-    cropCounterText = "";
+    cropCounterText = "Crops Broken:";
 
+    // Cast Counter
+    @SwitchProperty({
+        name: "Cast Counter",
+        description: "",
+        category: "Client",
+        subcategory: "HUD"
+    })
+    castCounter = false;
+
+    @TextProperty({
+        name: "Cast Counter Label",
+        description: "",
+        category: "Client",
+        subcategory: "HUD",
+        placeholder: ""
+    })
+    castCounterText = "Crops Broken:";
+
+    // Compass
     @SwitchProperty({
         name: "Compass",
         description: "",
-        category: "HUD",
-        subcategory: "Player"
+        category: "Client",
+        subcategory: "HUD"
     })
     compass = false;
 
+    // Coordinates
     @SwitchProperty({
         name: "Coordinates",
         description: "",
-        category: "HUD",
-        subcategory: "Player"
+        category: "Client",
+        subcategory: "HUD"
     })
     coords = false;
 
+    // Toggle Sprint
     @SwitchProperty({
         name: "Toggle Sprint",
         description: "",
-        category: "Modules",
-        subcategory: "Player"
+        category: "Player",
+        subcategory: ""
     })
     toggleSprint = false;
 

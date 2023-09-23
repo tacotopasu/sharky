@@ -5,11 +5,12 @@ register("playerInteract", () => {
 });
 
 register("renderOverlay", () => {
+    if(!Settings.castCounter) return;
 
     var width = Renderer.screen.getWidth();
 	var height = Renderer.screen.getHeight();
 
-    Renderer.drawString("Casts: " + casts / 2, 10, Client.getMinecraft().field_71466_p.field_78288_b + 30); // fontRenderer.FONT_HEIGHT
+    Renderer.drawString(Settings.castCounterText || "Casts:" + " " + casts / 2, 10, Client.getMinecraft().field_71466_p.field_78288_b + 30); // fontRenderer.FONT_HEIGHT
 });
 
 register("command", () => {
