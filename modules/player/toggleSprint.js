@@ -2,10 +2,10 @@ import Settings from "../../settings";
 
 register('step', toggleSprintStep);
 var sprintOn = false;
+var keyBind = new KeyBind(Client.getMinecraft().field_71474_y.field_151444_V); // gameSettings.keyBindSprint
 function toggleSprintStep() {
     if (!Settings.toggleSprint) return;
     if (Player.getMotionX() == 0 && Player.getMotionZ() == 0) return;
-    var keyBind = new KeyBind(Client.getMinecraft().field_71474_y.field_151444_V); // gameSettings.keyBindSprint
     if (keyBind.isPressed()) sprintOn = !sprintOn;
     keyBind.setState(sprintOn);
 }

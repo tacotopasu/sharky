@@ -1,3 +1,5 @@
+import Settings from "../../../settings";
+
 var casts = 0
 
 register("playerInteract", () => {
