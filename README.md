@@ -29,3 +29,5 @@ Furthermore! We might add more features to this when we feel like it! And finall
                       .**,*,,******###((##%(#(((                                
             OWO!                       ###%/((/%(((((#                         
 ```
+
+6/29/2024 / Making this repository public once more, I don't plan to update this anytime soon, but there's no loss in having this code open out there (aside from shaming myself publicly by showing the terrible soup i've cooked in these .js files...), hope it helps somebody <3 - tacotopasu
